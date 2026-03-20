@@ -27,6 +27,9 @@ export function Header() {
             <Link href="/quiz" className="hover:text-accent transition-colors">
               クイズ
             </Link>
+            <Link href="/baystars" className="hover:text-accent transition-colors">
+              BayStars
+            </Link>
           </nav>
           <button
             onClick={toggle}
@@ -79,6 +82,9 @@ export function Header() {
           </Link>
           <Link href="/quiz" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
             クイズ
+          </Link>
+          <Link href="/baystars" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
+            BayStars
           </Link>
         </nav>
       )}
