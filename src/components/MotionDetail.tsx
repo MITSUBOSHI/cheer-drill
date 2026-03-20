@@ -51,9 +51,45 @@ export function MotionDetail({
 
         <p className="text-text leading-relaxed mb-6">{motion.description}</p>
 
+        {/* 練習のステップ */}
+        <div className="border-t border-gray-100 pt-4 mb-6">
+          <h2 className="font-bold text-lg text-text mb-3">
+            練習のステップ
+          </h2>
+          <ol className="space-y-2">
+            {motion.practiceSteps.map((step, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="text-sm text-text leading-relaxed">
+                  {step}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* よくある間違い */}
+        <div className="border-t border-gray-100 pt-4 mb-6">
+          <h2 className="font-bold text-lg text-text mb-3">
+            よくある間違い
+          </h2>
+          <ul className="space-y-2">
+            {motion.commonMistakes.map((mistake, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span className="flex-shrink-0 text-hard mt-0.5">✕</span>
+                <span className="text-sm text-text leading-relaxed">
+                  {mistake}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="border-t border-gray-100 pt-4">
           <h2 className="font-bold text-lg text-text mb-3">
-            練習チェックリスト
+            ポイントチェックリスト
           </h2>
           <div className="flex items-center gap-2 mb-4">
             <div className="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
