@@ -11,6 +11,8 @@ export interface Motion {
   difficulty: Difficulty;
   description: string;
   tips: string[];
+  commonMistakes: string[];
+  practiceSteps: string[];
 }
 
 export interface ChecklistState {
