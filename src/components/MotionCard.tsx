@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Motion } from "@/types";
 import { DifficultyBadge } from "./DifficultyBadge";
+import { Ruby } from "./Ruby";
 
 export function MotionCard({ motion }: { motion: Motion }) {
   const href =
@@ -18,7 +19,7 @@ export function MotionCard({ motion }: { motion: Motion }) {
         <DifficultyBadge difficulty={motion.difficulty} />
       </div>
       <p className="text-sm text-text-muted leading-relaxed">
-        {motion.description}
+        <Ruby>{motion.description}</Ruby>
       </p>
       <p className="text-xs text-text-muted mt-2 opacity-60">{motion.nameEn}</p>
     </Link>

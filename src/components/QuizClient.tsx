@@ -5,6 +5,7 @@ import { clsx } from "clsx";
 import type { Motion, QuizQuestion } from "@/types";
 import { armMotions } from "@/data/arm-motions";
 import { steps } from "@/data/steps";
+import { Ruby } from "./Ruby";
 
 const allMotions: Motion[] = [...armMotions, ...steps];
 const QUIZ_COUNT = 5;
@@ -78,16 +79,20 @@ export function QuizClient() {
         <div className="text-5xl mb-4">
           {percentage >= 80 ? "🎉" : percentage >= 60 ? "👏" : "💪"}
         </div>
-        <h2 className="text-2xl font-extrabold text-text mb-2">結果発表!</h2>
+        <h2 className="text-2xl font-extrabold text-text mb-2">
+          <Ruby>結果発表!</Ruby>
+        </h2>
         <p className="text-4xl font-extrabold text-primary mb-2">
           {score} / {QUIZ_COUNT}
         </p>
         <p className="text-text-muted mb-6">
-          {percentage >= 80
-            ? "すごい！よく覚えてるね！"
-            : percentage >= 60
-            ? "がんばったね！もう少し練習しよう！"
-            : "もっと練習してまたチャレンジしよう！"}
+          {percentage >= 80 ? (
+            <Ruby>すごい！よく覚えてるね！</Ruby>
+          ) : percentage >= 60 ? (
+            <Ruby>がんばったね！もう少し練習しよう！</Ruby>
+          ) : (
+            <Ruby>もっと練習してまたチャレンジしよう！</Ruby>
+          )}
         </p>
         <button
           onClick={restart}
@@ -103,7 +108,7 @@ export function QuizClient() {
     <div className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6">
       <div className="flex items-center justify-between mb-4">
         <span className="text-sm font-medium text-text-muted">
-          第 {currentIndex + 1} 問 / {QUIZ_COUNT}
+          <Ruby>{`第 ${currentIndex + 1} 問 / ${QUIZ_COUNT}`}</Ruby>
         </span>
         <span className="text-sm font-bold text-primary">
           スコア: {score}
@@ -118,9 +123,11 @@ export function QuizClient() {
       </div>
 
       <div className="py-6 text-center">
-        <p className="text-text-muted text-sm mb-2">この説明のモーションは？</p>
+        <p className="text-text-muted text-sm mb-2">
+          <Ruby>この説明のモーションは？</Ruby>
+        </p>
         <p className="text-lg font-bold text-text leading-relaxed">
-          「{current.correctMotion.description}」
+          「<Ruby>{current.correctMotion.description}</Ruby>」
         </p>
       </div>
 

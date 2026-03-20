@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { armMotions } from "@/data/arm-motions";
 import { MotionList } from "@/components/MotionList";
+import { Ruby } from "@/components/Ruby";
 
 export const metadata: Metadata = {
   title: "アームモーション一覧 | チアドリル",
@@ -15,7 +16,7 @@ export default function ArmMotionsPage() {
         アームモーション
       </h1>
       <p className="text-text-muted mb-6">
-        チアリーディングの基本となる18種類のアームモーション。ひとつずつマスターしよう！
+        <Ruby>チアリーディングの基本となる18種類のアームモーション。ひとつずつマスターしよう！</Ruby>
       </p>
       <MotionList motions={armMotions} />
     </div>

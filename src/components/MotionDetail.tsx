@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import type { Motion } from "@/types";
 import { DifficultyBadge } from "./DifficultyBadge";
+import { Ruby } from "./Ruby";
 
 export function MotionDetail({
   motion,
@@ -35,7 +36,7 @@ export function MotionDetail({
         href={backHref}
         className="inline-flex items-center gap-1 text-primary font-medium text-sm mb-6 hover:underline"
       >
-        ← {backLabel}
+        ← <Ruby>{backLabel}</Ruby>
       </Link>
 
       <div className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6">
@@ -49,12 +50,14 @@ export function MotionDetail({
           <DifficultyBadge difficulty={motion.difficulty} />
         </div>
 
-        <p className="text-text leading-relaxed mb-6">{motion.description}</p>
+        <p className="text-text leading-relaxed mb-6">
+          <Ruby>{motion.description}</Ruby>
+        </p>
 
         {/* 練習のステップ */}
         <div className="border-t border-gray-100 pt-4 mb-6">
           <h2 className="font-bold text-lg text-text mb-3">
-            練習のステップ
+            <Ruby>練習のステップ</Ruby>
           </h2>
           <ol className="space-y-2">
             {motion.practiceSteps.map((step, i) => (
@@ -63,7 +66,7 @@ export function MotionDetail({
                   {i + 1}
                 </span>
                 <span className="text-sm text-text leading-relaxed">
-                  {step}
+                  <Ruby>{step}</Ruby>
                 </span>
               </li>
             ))}
@@ -73,14 +76,14 @@ export function MotionDetail({
         {/* よくある間違い */}
         <div className="border-t border-gray-100 pt-4 mb-6">
           <h2 className="font-bold text-lg text-text mb-3">
-            よくある間違い
+            <Ruby>よくある間違い</Ruby>
           </h2>
           <ul className="space-y-2">
             {motion.commonMistakes.map((mistake, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="flex-shrink-0 text-hard mt-0.5">✕</span>
                 <span className="text-sm text-text leading-relaxed">
-                  {mistake}
+                  <Ruby>{mistake}</Ruby>
                 </span>
               </li>
             ))}
@@ -89,7 +92,7 @@ export function MotionDetail({
 
         <div className="border-t border-gray-100 pt-4">
           <h2 className="font-bold text-lg text-text mb-3">
-            ポイントチェックリスト
+            <Ruby>ポイントチェックリスト</Ruby>
           </h2>
           <div className="flex items-center gap-2 mb-4">
             <div className="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
@@ -139,7 +142,7 @@ export function MotionDetail({
                       checked[i] ? "line-through text-text-muted" : "text-text"
                     }`}
                   >
-                    {tip}
+                    <Ruby>{tip}</Ruby>
                   </span>
                 </button>
               </li>

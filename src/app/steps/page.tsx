@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { steps } from "@/data/steps";
 import { MotionList } from "@/components/MotionList";
+import { Ruby } from "@/components/Ruby";
 
 export const metadata: Metadata = {
   title: "ステップバリエーション一覧 | チアドリル",
@@ -15,7 +16,7 @@ export default function StepsPage() {
         ステップバリエーション
       </h1>
       <p className="text-text-muted mb-6">
-        リズムに合わせて楽しくステップ！6種類のステップバリエーションを練習しよう！
+        <Ruby>リズムに合わせて楽しくステップ！6種類のステップバリエーションを練習しよう！</Ruby>
       </p>
       <MotionList motions={steps} />
     </div>
