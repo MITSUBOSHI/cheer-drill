@@ -294,12 +294,91 @@ const furiganaDict: [string, string][] = [
   ["見", "み"],
 ];
 
-function applyFurigana(text: string): ReactNode[] {
-  type Segment =
-    | { type: "text"; value: string }
-    | { type: "ruby"; kanji: string; reading: string };
+const KANJI_RE = /[\u4e00-\u9fff]+/;
 
-  type Match = { start: number; end: number; kanji: string; reading: string };
+/**
+ * マッチした文字列を漢字/非漢字に分割し、漢字部分にのみrubyを付与する。
+ * 送りがなは非漢字としてそのまま表示される。
+ *
+ * 例: matchText="曲がっ", reading="まがっ"
+ *   → segments: ["曲"(kanji), "がっ"(other)]
+ *   → regex: /^(.+)がっ$/ で reading をマッチ → "曲" に "ま" のruby
+ */
+function renderMatch(matchText: string, reading: string, keyBase: number): ReactNode[] {
+  // 全て漢字なら丸ごとruby
+  if (/^[\u4e00-\u9fff]+$/.test(matchText)) {
+    return [
+      <ruby key={keyBase}>
+        {matchText}
+        <rp>(</rp>
+        <rt>{reading}</rt>
+        <rp>)</rp>
+      </ruby>,
+    ];
+  }
+
+  // 漢字と非漢字の交互セグメントに分割
+  const segments: { text: string; isKanji: boolean }[] = [];
+  let remaining = matchText;
+  while (remaining.length > 0) {
+    const kanjiMatch = KANJI_RE.exec(remaining);
+    if (!kanjiMatch) {
+      segments.push({ text: remaining, isKanji: false });
+      break;
+    }
+    if (kanjiMatch.index > 0) {
+      segments.push({ text: remaining.slice(0, kanjiMatch.index), isKanji: false });
+    }
+    segments.push({ text: kanjiMatch[0], isKanji: true });
+    remaining = remaining.slice(kanjiMatch.index + kanjiMatch[0].length);
+  }
+
+  // 非漢字セグメントをアンカーにしてreadingを分割するregexを構築
+  const regexParts: string[] = [];
+  let kanjiCount = 0;
+  for (const seg of segments) {
+    if (seg.isKanji) {
+      kanjiCount++;
+      regexParts.push("(.+?)");
+    } else {
+      regexParts.push(seg.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    }
+  }
+  // 最後の漢字キャプチャを貪欲に
+  const regexStr = regexParts.join("").replace(/\(\.\+\?\)(?=[^(]*$)/, "(.+)");
+  const readingMatch = new RegExp("^" + regexStr + "$").exec(reading);
+
+  if (!readingMatch) {
+    // フォールバック: 全体をrubyにする
+    return [
+      <ruby key={keyBase}>
+        {matchText}
+        <rp>(</rp>
+        <rt>{reading}</rt>
+        <rp>)</rp>
+      </ruby>,
+    ];
+  }
+
+  let captureIdx = 1;
+  return segments.map((seg, i) => {
+    if (seg.isKanji) {
+      const r = readingMatch[captureIdx++];
+      return (
+        <ruby key={`${keyBase}-${i}`}>
+          {seg.text}
+          <rp>(</rp>
+          <rt>{r}</rt>
+          <rp>)</rp>
+        </ruby>
+      );
+    }
+    return <span key={`${keyBase}-${i}`}>{seg.text}</span>;
+  });
+}
+
+function applyFurigana(text: string): ReactNode[] {
+  type Match = { start: number; end: number; matchText: string; reading: string };
   const matches: Match[] = [];
 
   for (const [word, reading] of furiganaDict) {
@@ -308,17 +387,15 @@ function applyFurigana(text: string): ReactNode[] {
       matches.push({
         start: idx,
         end: idx + word.length,
-        kanji: word,
+        matchText: word,
         reading,
       });
       idx += word.length;
     }
   }
 
-  // Sort by position, longer matches first for same position
   matches.sort((a, b) => a.start - b.start || b.end - a.end);
 
-  // Remove overlapping matches (keep first/longest)
   const filtered: Match[] = [];
   let lastEnd = 0;
   for (const m of matches) {
@@ -328,32 +405,22 @@ function applyFurigana(text: string): ReactNode[] {
     }
   }
 
-  // Build segments
-  const segments: Segment[] = [];
+  const result: ReactNode[] = [];
   let pos = 0;
+  let keyIdx = 0;
   for (const m of filtered) {
     if (m.start > pos) {
-      segments.push({ type: "text", value: text.slice(pos, m.start) });
+      result.push(<span key={keyIdx++}>{text.slice(pos, m.start)}</span>);
     }
-    segments.push({ type: "ruby", kanji: m.kanji, reading: m.reading });
+    result.push(...renderMatch(m.matchText, m.reading, keyIdx));
+    keyIdx += 10;
     pos = m.end;
   }
   if (pos < text.length) {
-    segments.push({ type: "text", value: text.slice(pos) });
+    result.push(<span key={keyIdx}>{text.slice(pos)}</span>);
   }
 
-  return segments.map((seg, i) =>
-    seg.type === "text" ? (
-      <span key={i}>{seg.value}</span>
-    ) : (
-      <ruby key={i}>
-        {seg.kanji}
-        <rp>(</rp>
-        <rt>{seg.reading}</rt>
-        <rp>)</rp>
-      </ruby>
-    )
-  );
+  return result;
 }
 
 export function Ruby({ children }: { children: string }) {
