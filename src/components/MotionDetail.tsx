@@ -54,6 +54,24 @@ export function MotionDetail({
           <Ruby>{motion.description}</Ruby>
         </p>
 
+        {/* お手本動画 */}
+        {motion.youtubeVideoId && (
+          <div className="mb-6">
+            <h2 className="font-bold text-lg text-text mb-3">
+              <Ruby>お手本動画</Ruby>
+            </h2>
+            <div className="relative w-full pt-[56.25%] rounded-xl overflow-hidden bg-gray-100">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${motion.youtubeVideoId}`}
+                title={`${motion.nameJa}の参考動画`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
+
         {/* 練習のステップ */}
         <div className="border-t border-gray-100 pt-4 mb-6">
           <h2 className="font-bold text-lg text-text mb-3">

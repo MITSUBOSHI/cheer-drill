@@ -28,6 +28,7 @@ export const armMotions: Motion[] = [
       "「1・2」のカウントで、クラスプ→ハイブイを繰り返そう",
       "慣れたら音楽に合わせてテンポアップ！",
     ],
+    youtubeVideoId: "zKG3pkEurwM",
   },
   {
     id: "low-v",
@@ -56,6 +57,7 @@ export const armMotions: Motion[] = [
       "鏡で左右対称になっているかチェックしよう",
       "ハイブイ→ローブイの連続をリズムに合わせて練習！",
     ],
+    youtubeVideoId: "56CcU0KXWcE",
   },
   {
     id: "clasp",
@@ -85,6 +87,7 @@ export const armMotions: Motion[] = [
       "クラスプ→ハイブイ→クラスプ のように、他のモーションとセットで練習",
       "すべてのモーションの間にクラスプに戻る練習をしよう",
     ],
+    youtubeVideoId: "8IZ6YoUe7PM",
   },
   {
     id: "diagonal-right",
@@ -112,6 +115,7 @@ export const armMotions: Motion[] = [
       "鏡で一直線になっているか確認しよう",
       "ダイアゴナル右→クラスプ→ダイアゴナル左の連続練習！",
     ],
+    youtubeVideoId: "ya-QctftLKo",
   },
   {
     id: "diagonal-left",
@@ -139,6 +143,7 @@ export const armMotions: Motion[] = [
       "鏡の前で左右対称になっているか確認",
       "カウントに合わせて右→左→右→左と切り替え練習！",
     ],
+    youtubeVideoId: "ya-QctftLKo",
   },
   {
     id: "touchdown",
@@ -168,6 +173,7 @@ export const armMotions: Motion[] = [
       "クラスプ→タッチダウン→クラスプ を繰り返そう",
       "ハイブイとの違い（幅）を意識して使い分けよう",
     ],
+    youtubeVideoId: "XIQtWezmqyc",
   },
   {
     id: "l-motion-right",
@@ -196,6 +202,7 @@ export const armMotions: Motion[] = [
       "鏡で90度のLの字になっているか確認",
       "右手上→左手上の切り替えを練習しよう",
     ],
+    youtubeVideoId: "Ie34ra_8Rsc",
   },
   {
     id: "l-motion-left",
@@ -224,6 +231,7 @@ export const armMotions: Motion[] = [
       "カウント「1→2→3→4」で右上→クラスプ→左上→クラスプ",
       "慣れたらテンポアップ！",
     ],
+    youtubeVideoId: "Ie34ra_8Rsc",
   },
   {
     id: "low-touchdown",
@@ -252,6 +260,7 @@ export const armMotions: Motion[] = [
       "鏡で腕が平行（肩幅）になっているか確認",
       "クラスプからの切り替えをスムーズに！",
     ],
+    youtubeVideoId: "cKXFbDpQ5Xs",
   },
   {
     id: "t-motion",
@@ -281,6 +290,7 @@ export const armMotions: Motion[] = [
       "10秒キープして腕の高さを体で覚えよう",
       "クラスプ→ティーモーション→クラスプ をリズミカルに！",
     ],
+    youtubeVideoId: "TIn1n7xZUXY",
   },
   {
     id: "half-t",
@@ -310,6 +320,7 @@ export const armMotions: Motion[] = [
       "鏡で正面から見て腕が肩幅になっているか確認",
       "横から見て腕が地面と平行になっているかチェック！",
     ],
+    youtubeVideoId: "2daOJnw7juk",
   },
   {
     id: "table-top",
@@ -339,6 +350,7 @@ export const armMotions: Motion[] = [
       "横から鏡を見て、前腕が水平か確認",
       "テーブルトップ→ティーモーション→テーブルトップの連続練習！",
     ],
+    youtubeVideoId: "5HP7t2jty7Y",
   },
   {
     id: "bow-and-arrow-right",
@@ -368,6 +380,7 @@ export const armMotions: Motion[] = [
       "両方を同時に行って、弓を引く形を作ろう",
       "右手→左手の切り替え練習でスムーズさを磨こう！",
     ],
+    youtubeVideoId: "xVd8T3okTOg",
   },
   {
     id: "bow-and-arrow-left",
@@ -396,6 +409,7 @@ export const armMotions: Motion[] = [
       "右→左の切り替えをカウントに合わせて練習",
       "慣れたらスピードを上げて切り替え！",
     ],
+    youtubeVideoId: "xVd8T3okTOg",
   },
   {
     id: "muscle-man",
@@ -425,6 +439,7 @@ export const armMotions: Motion[] = [
       "テーブルトップとの違い（前腕の向き）を確認しよう",
       "テーブルトップ→マッスルマンの切り替え練習！",
     ],
+    youtubeVideoId: "LT0jMIMH43s",
   },
   {
     id: "k-motion-right",
@@ -453,6 +468,7 @@ export const armMotions: Motion[] = [
       "鏡の前でKの字に見えるか確認しよう",
       "右向き→左向きの切り替え練習にチャレンジ！",
     ],
+    youtubeVideoId: "Ke1cAoWyQtI",
   },
   {
     id: "k-motion-left",
@@ -481,6 +497,7 @@ export const armMotions: Motion[] = [
       "右→左の切り替えをゆっくりから練習",
       "カウント「1→2」で右→左をリズミカルに！",
     ],
+    youtubeVideoId: "Ke1cAoWyQtI",
   },
   {
     id: "w-motion",
@@ -509,5 +526,246 @@ export const armMotions: Motion[] = [
       "マッスルマン→ダブリュー→マッスルマンの切り替え練習",
       "カウントに合わせてテンポよく！",
     ],
+    youtubeVideoId: "baFaTwIoEFk",
+  },
+  {
+    id: "clap",
+    slug: "clap",
+    nameJa: "クラップ",
+    nameEn: "Clap",
+    category: "arm-motion",
+    difficulty: "easy",
+    description:
+      "両手を胸の前でパンと叩くポーズ！リズムをとったり、盛り上げるときに使うよ！",
+    tips: [
+      "両手を胸の前でしっかり合わせて叩く",
+      "手のひら全体を使って大きな音を出す",
+      "叩く位置はみぞおちの高さ",
+      "ひじは自然に体の横に",
+      "叩いた後すぐに次のモーションに移れるように準備する",
+    ],
+    commonMistakes: [
+      "叩く位置が高すぎたり低すぎたりする",
+      "指先だけで叩いて音が小さい",
+      "リズムとずれてしまう",
+      "叩いた後に手が離れすぎる",
+    ],
+    practiceSteps: [
+      "まずはクラスプの姿勢から両手を開いて叩く練習",
+      "「パン・パン」とリズムに合わせて叩こう",
+      "クラスプ→クラップ→クラスプの切り替え練習",
+      "音楽に合わせてタイミングよく叩けるようにしよう！",
+    ],
+    youtubeVideoId: "uwe4WwGOaKo",
+  },
+  {
+    id: "side-v",
+    slug: "side-v",
+    nameJa: "サイドブイ",
+    nameEn: "Side V",
+    category: "arm-motion",
+    difficulty: "easy",
+    description:
+      "両腕を横に広げてVの字にするポーズ！ハイブイを横にしたバージョン！",
+    tips: [
+      "片腕を斜め上、もう片腕を斜め下に横方向へ伸ばす",
+      "手はグーに握り、手の甲を外側に向ける",
+      "ひじをしっかり伸ばしきる",
+      "体の正面ではなく横方向にVの字を作るイメージ",
+      "体の中心軸をまっすぐ保つ",
+    ],
+    commonMistakes: [
+      "腕が前に出てしまう（横方向が正解）",
+      "ひじが曲がっている",
+      "上下の腕の角度がバラバラになる",
+      "体が傾いてしまう",
+    ],
+    practiceSteps: [
+      "ハイブイとローブイを復習しよう（角度の感覚を使う）",
+      "横方向にVの字を作る感覚をつかもう",
+      "鏡で横から見て正しい角度になっているか確認",
+      "左右を切り替える練習をしよう！",
+    ],
+    youtubeVideoId: "eTyKMFSlIwQ",
+  },
+  {
+    id: "fist",
+    slug: "fist",
+    nameJa: "フィスト",
+    nameEn: "Fist",
+    category: "arm-motion",
+    difficulty: "easy",
+    description:
+      "手をグーに握る基本のハンドポジション！すべてのアームモーションで使う超基本！",
+    tips: [
+      "4本の指をしっかり丸めて握る",
+      "親指は人差し指と中指の上に置く（中に入れない）",
+      "手首をまっすぐに保つ（曲げない）",
+      "力を入れすぎず、しっかり握る",
+      "手の甲の向きはモーションごとに変わるので注意",
+    ],
+    commonMistakes: [
+      "親指を指の中に入れてしまう（ケガのもと）",
+      "手首が曲がってしまう",
+      "握りがゆるくてパーに見える",
+      "力みすぎて腕全体が震える",
+    ],
+    practiceSteps: [
+      "正しいフィストの形を覚えよう（親指は外側！）",
+      "手首をまっすぐにしたまま握る練習",
+      "フィストを作りながら腕をいろんな方向に伸ばしてみよう",
+      "すべてのモーションでフィストの形をチェック！",
+    ],
+    youtubeVideoId: "kRulHSDqdYo",
+  },
+  {
+    id: "checkmark",
+    slug: "checkmark",
+    nameJa: "チェックマーク",
+    nameEn: "Checkmark",
+    category: "arm-motion",
+    difficulty: "medium",
+    description:
+      "チェックマーク（✓）の形を腕で作るポーズ！片腕を斜め上、もう片腕はひじを曲げて表現！",
+    tips: [
+      "片腕をハイブイの位置に斜め上へまっすぐ伸ばす",
+      "もう片腕はひじを曲げて、拳を胸の前あたりに",
+      "伸ばした腕とひじの角度でチェックマークの形を作る",
+      "手はグーに握り、手の甲は外側に",
+      "上半身はまっすぐ保つ",
+    ],
+    commonMistakes: [
+      "伸ばした腕のひじが曲がっている",
+      "曲げた腕の拳の位置が定まらない",
+      "チェックマークの形に見えない（角度がゆるすぎる）",
+      "体が傾いてしまう",
+    ],
+    practiceSteps: [
+      "ダイアゴナルとエルモーションを復習しよう",
+      "片腕をハイブイの位置に伸ばすところから始める",
+      "もう片腕を曲げてチェックマークの形を作ろう",
+      "鏡で✓の形に見えるか確認！左右両方練習しよう",
+    ],
+    youtubeVideoId: "YbIwLGwE-bs",
+  },
+  {
+    id: "box",
+    slug: "box",
+    nameJa: "ボックス",
+    nameEn: "Box",
+    category: "arm-motion",
+    difficulty: "medium",
+    description:
+      "両腕で四角形（ボックス）を作るポーズ！腕を前に出してフレームを作ろう！",
+    tips: [
+      "両ひじを肩の高さに上げる",
+      "ひじを90度に曲げて、前腕を正面に向ける",
+      "両方の拳を合わせるか、肩幅に保つ",
+      "ひじから拳までが地面と平行になるように",
+      "肩を下げてリラックスしながらキープ",
+    ],
+    commonMistakes: [
+      "ひじが肩の高さまで上がっていない",
+      "前腕が傾いている",
+      "拳の位置が左右でずれている",
+      "肩が上がって力んでしまう",
+    ],
+    practiceSteps: [
+      "テーブルトップを復習しよう（似た形！）",
+      "両ひじを肩の高さにして拳を正面で合わせる",
+      "鏡で四角形のフレームに見えるか確認",
+      "ボックス→ティーモーション→ボックスの切り替え練習！",
+    ],
+    youtubeVideoId: "wOqn-qMtlDw",
+  },
+  {
+    id: "candlestick",
+    slug: "candlestick",
+    nameJa: "キャンドルスティック",
+    nameEn: "Candlestick",
+    category: "arm-motion",
+    difficulty: "easy",
+    description:
+      "両腕を体の前でまっすぐ下に伸ばすポーズ！ろうそくのようにまっすぐ！",
+    tips: [
+      "両腕を体の正面でまっすぐ下に伸ばす",
+      "手はグーに握り、拳を合わせるか肩幅に",
+      "ひじをしっかり伸ばしきる",
+      "腕は体にくっつけず、少し前に出す",
+      "背筋をまっすぐに保つ",
+    ],
+    commonMistakes: [
+      "腕が体の横に行ってしまう（正面が正解）",
+      "ひじが曲がっている",
+      "猫背になってしまう",
+      "拳の向きがバラバラ",
+    ],
+    practiceSteps: [
+      "ロータッチダウンとの違いを確認しよう（前 vs 横）",
+      "体の正面で腕をまっすぐ下ろす練習",
+      "クラスプ→キャンドルスティック→クラスプの切り替え",
+      "他のモーションとの組み合わせを練習しよう！",
+    ],
+    youtubeVideoId: "XUe8VtjaSkU",
+  },
+  {
+    id: "bucket",
+    slug: "bucket",
+    nameJa: "バケット",
+    nameEn: "Bucket",
+    category: "arm-motion",
+    difficulty: "easy",
+    description:
+      "両腕を前に伸ばして手を下に向けるポーズ！バケツを持っているようなイメージ！",
+    tips: [
+      "両腕を肩の高さよりやや低めでまっすぐ前に伸ばす",
+      "拳を下に向ける（手の甲が上）",
+      "ひじをしっかり伸ばす",
+      "腕と腕の幅は肩幅を保つ",
+      "背筋をまっすぐにして前かがみにならない",
+    ],
+    commonMistakes: [
+      "拳の向きが下ではなく前を向いている",
+      "腕が下がりすぎる",
+      "ひじが曲がっている",
+      "体が前に傾いてしまう",
+    ],
+    practiceSteps: [
+      "ハーフティーを復習しよう（腕の位置は似ている）",
+      "ハーフティーから拳を下に向けるとバケットになる！",
+      "鏡で腕の高さと拳の向きを確認",
+      "バケット→ハーフティー→バケットの切り替え練習！",
+    ],
+    youtubeVideoId: "hsv7W0xABCo",
+  },
+  {
+    id: "punch-up",
+    slug: "punch-up",
+    nameJa: "パンチアップ",
+    nameEn: "Punch Up",
+    category: "arm-motion",
+    difficulty: "easy",
+    description:
+      "片腕を真上にパンチするように突き上げるポーズ！元気よくパワフルに！",
+    tips: [
+      "片腕を耳の横でまっすぐ真上に突き上げる",
+      "もう片腕は腰に当てるか、クラスプの位置に",
+      "突き上げた腕のひじをしっかり伸ばす",
+      "手はグーに握り、パンチするイメージ",
+      "肩を下げて、首を長く見せる",
+    ],
+    commonMistakes: [
+      "腕が前に出てしまう（真上が正解）",
+      "ひじが曲がっている",
+      "肩が上がってしまう",
+      "体が傾いてしまう",
+    ],
+    practiceSteps: [
+      "タッチダウンの片手バージョンとしてイメージしよう",
+      "真上にパンチ！のイメージで腕を突き上げる",
+      "左右交互にパンチアップを練習しよう",
+      "カウントに合わせて右パンチ→左パンチを切り替え！",
+    ],
+    youtubeVideoId: "Eyp-dBXwPKQ",
   },
 ];

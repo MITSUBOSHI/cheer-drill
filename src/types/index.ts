@@ -13,6 +13,7 @@ export interface Motion {
   tips: string[];
   commonMistakes: string[];
   practiceSteps: string[];
+  youtubeVideoId?: string;
 }
 
 export interface ChecklistState {

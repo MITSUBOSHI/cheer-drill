@@ -29,6 +29,7 @@ export const steps: Motion[] = [
       "手拍子しながらリズムをとる練習をしよう",
       "慣れたらアームモーション（ハイブイなど）をつけてみよう！",
     ],
+    youtubeVideoId: "0rS8hWl-eI8",
   },
   {
     id: "open-close",
@@ -58,6 +59,7 @@ export const steps: Motion[] = [
       "慣れたら軽くジャンプしながらやってみよう",
       "アームモーション（ハイブイ→ローブイなど）を合わせて挑戦！",
     ],
+    youtubeVideoId: "2ZRvpRRNfwc",
   },
   {
     id: "box-step",
@@ -88,6 +90,7 @@ export const steps: Motion[] = [
       "スムーズにつながるまで繰り返そう",
       "慣れたらカウントを速くしていこう！反対回りも練習！",
     ],
+    youtubeVideoId: "KtdoC1Ym62c",
   },
   {
     id: "grapevine",
@@ -118,6 +121,7 @@ export const steps: Motion[] = [
       "「横→後ろクロス→横→タッチ」をゆっくり繰り返す",
       "右方向をマスターしたら、左方向も同じように練習！",
     ],
+    youtubeVideoId: "eladyb2pLt4",
   },
   {
     id: "two-step",
@@ -147,6 +151,7 @@ export const steps: Motion[] = [
       "右方向→左方向を交互に練習",
       "慣れたらアームモーションを合わせてみよう！",
     ],
+    youtubeVideoId: "xTnSPqbqVjo",
   },
   {
     id: "chasse",
@@ -176,5 +181,6 @@ export const steps: Motion[] = [
       "少しずつジャンプの要素を加えていく",
       "軽やかに、床をすべるような感覚を意識して練習！",
     ],
+    youtubeVideoId: "2ZRvpRRNfwc",
   },
 ];
