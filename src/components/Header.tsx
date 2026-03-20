@@ -44,16 +44,13 @@ export function Header() {
           </nav>
           <button
             onClick={toggle}
-            className={`text-xs px-2.5 py-1 rounded-full font-bold transition-colors ${
+            className={`text-xs px-3 py-1.5 rounded-full font-bold transition-colors ${
               furigana
                 ? "bg-accent text-text"
                 : "bg-white/20 text-white hover:bg-white/30"
             }`}
-            title="ふりがなモード"
           >
-            <ruby>
-              あ<rp>(</rp><rt className="text-[8px]">A</rt><rp>)</rp>
-            </ruby>
+            ふりがな {furigana ? "ON" : "OFF"}
           </button>
         </div>
       </div>
