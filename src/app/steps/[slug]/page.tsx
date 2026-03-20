@@ -7,12 +7,13 @@ export function generateStaticParams() {
   return steps.map((m) => ({ slug: m.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const motion = steps.find((m) => m.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const motion = steps.find((m) => m.slug === slug);
   if (!motion) return {};
   return {
     title: `${motion.nameJa} | ステップ | チアドリル`,
@@ -20,12 +21,13 @@ export function generateMetadata({
   };
 }
 
-export default function StepDetailPage({
+export default async function StepDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const motion = steps.find((m) => m.slug === params.slug);
+  const { slug } = await params;
+  const motion = steps.find((m) => m.slug === slug);
   if (!motion) notFound();
 
   return (
