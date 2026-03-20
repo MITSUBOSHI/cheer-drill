@@ -45,7 +45,7 @@ export default function Home() {
               アームモーション
             </h2>
             <p className="text-sm text-text-muted">
-              <Ruby>18種類のアームモーションを覚えよう！ハイブイ、タッチダウンなど基本のポーズがいっぱい！</Ruby>
+              <Ruby>26種類のアームモーションを覚えよう！ハイブイ、タッチダウンなど基本のポーズがいっぱい！</Ruby>
             </p>
             <span className="inline-block mt-3 text-primary font-medium text-sm">
               <Ruby>練習する</Ruby> →

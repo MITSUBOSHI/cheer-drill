@@ -6,7 +6,7 @@ import { Ruby } from "@/components/Ruby";
 export const metadata: Metadata = {
   title: "アームモーション一覧 | チアドリル",
   description:
-    "チアリーディングの基本アームモーション18種類を学ぼう！ハイブイ、ローブイ、タッチダウンなど、写真付きでわかりやすく解説。",
+    "チアリーディングの基本アームモーション26種類を学ぼう！ハイブイ、ローブイ、タッチダウンなど、動画付きでわかりやすく解説。",
 };
 
 export default function ArmMotionsPage() {
@@ -16,7 +16,7 @@ export default function ArmMotionsPage() {
         アームモーション
       </h1>
       <p className="text-text-muted mb-6">
-        <Ruby>チアリーディングの基本となる18種類のアームモーション。ひとつずつマスターしよう！</Ruby>
+        <Ruby>チアリーディングの基本となる26種類のアームモーション。ひとつずつマスターしよう！</Ruby>
       </p>
       <MotionList motions={armMotions} />
     </div>

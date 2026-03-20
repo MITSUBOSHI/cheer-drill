@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "チアドリル - キッズ向けチアリーディング練習アプリ",
   description:
-    "アームモーションやステップを楽しく学べる！キッズ向けチアリーディング練習ドリルアプリ。18種のアームモーションと6種のステップバリエーションをマスターしよう！",
+    "アームモーションやステップを楽しく学べる！キッズ向けチアリーディング練習ドリルアプリ。26種のアームモーションと6種のステップバリエーションをマスターしよう！",
 };
 
 export default function RootLayout({

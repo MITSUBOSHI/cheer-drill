@@ -1,8 +1,8 @@
 import { armMotions } from "./arm-motions";
 
 describe("armMotions", () => {
-  it("should have 18 arm motions", () => {
-    expect(armMotions).toHaveLength(18);
+  it("should have 26 arm motions", () => {
+    expect(armMotions).toHaveLength(26);
   });
 
   it("should all have category arm-motion", () => {
