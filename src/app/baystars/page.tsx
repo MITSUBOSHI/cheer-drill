@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Ruby } from "@/components/Ruby";
 
 export const metadata: Metadata = {
@@ -49,6 +50,15 @@ export default function BayStarsPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8 text-center">
+        <Link
+          href="/diana-kids"
+          className="inline-block bg-primary text-white font-bold px-6 py-3 rounded-full hover:bg-primary-dark transition-colors"
+        >
+          diana kids
+        </Link>
       </div>
     </div>
   );
