@@ -62,7 +62,7 @@ export default function DianaKidsPage() {
           diana kids
         </h1>
         <p className="text-text-muted mb-6 text-sm">
-          このページは限定公開です。パスワードを入力してください。
+          <Ruby>このページは限定公開です。パスワードを入力してください。</Ruby>
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -73,13 +73,13 @@ export default function DianaKidsPage() {
             className="w-full px-4 py-2.5 rounded-xl border border-primary-light/30 text-center text-text focus:outline-none focus:ring-2 focus:ring-primary"
           />
           {error && (
-            <p className="text-red-500 text-sm">パスワードが違います</p>
+            <p className="text-red-500 text-sm"><Ruby>パスワードが違います</Ruby></p>
           )}
           <button
             type="submit"
             className="w-full bg-primary text-white font-bold px-6 py-2.5 rounded-full hover:bg-primary-dark transition-colors"
           >
-            入る
+            <Ruby>入る</Ruby>
           </button>
         </form>
       </div>
@@ -114,10 +114,10 @@ export default function DianaKidsPage() {
       {/* テーマソング */}
       <section className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6">
         <h2 className="font-bold text-lg text-text mb-1">
-          2026年チアスクールテーマソング
+          <Ruby>2026年チアスクールテーマソング</Ruby>
         </h2>
         <h3 className="font-bold text-text mb-4">
-          【Wing　歌詞】
+          <Ruby>【Wing　歌詞】</Ruby>
         </h3>
         <audio
           controls
