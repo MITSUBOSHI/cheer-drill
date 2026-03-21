@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "BayStars | チアドリル",
   description:
     "横浜DeNAベイスターズの応援ダンスを覚えよう！熱き星たちよ、ハピスタダンスの動画で練習！",
+  robots: { index: false, follow: false },
 };
 
 const videos = [
