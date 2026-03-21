@@ -4,10 +4,14 @@ import { DifficultyBadge } from "./DifficultyBadge";
 import { Ruby } from "./Ruby";
 
 export function MotionCard({ motion }: { motion: Motion }) {
-  const href =
-    motion.category === "arm-motion"
-      ? `/arm-motions/${motion.slug}`
-      : `/steps/${motion.slug}`;
+  const categoryPath: Record<string, string> = {
+    "arm-motion": "arm-motions",
+    step: "steps",
+    jump: "jumps",
+    turn: "turns",
+    kick: "kicks",
+  };
+  const href = `/${categoryPath[motion.category]}/${motion.slug}`;
 
   return (
     <Link
