@@ -69,6 +69,57 @@ export default function Home() {
             </span>
           </Link>
 
+          {/* Jumps */}
+          <Link
+            href="/jumps"
+            className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
+          >
+            <div className="text-4xl mb-3">🦘</div>
+            <h2 className="text-xl font-bold text-text mb-2">
+              ジャンプ
+            </h2>
+            <p className="text-sm text-text-muted">
+              <Ruby>5種類のジャンプテクニックを練習しよう！高く跳んでかっこよく決めよう！</Ruby>
+            </p>
+            <span className="inline-block mt-3 text-primary font-medium text-sm">
+              <Ruby>練習する</Ruby> →
+            </span>
+          </Link>
+
+          {/* Turns */}
+          <Link
+            href="/turns"
+            className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
+          >
+            <div className="text-4xl mb-3">🌀</div>
+            <h2 className="text-xl font-bold text-text mb-2">
+              ターン
+            </h2>
+            <p className="text-sm text-text-muted">
+              <Ruby>4種類のターンテクニックを練習しよう！きれいに回ろう！</Ruby>
+            </p>
+            <span className="inline-block mt-3 text-primary font-medium text-sm">
+              <Ruby>練習する</Ruby> →
+            </span>
+          </Link>
+
+          {/* Kicks */}
+          <Link
+            href="/kicks"
+            className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
+          >
+            <div className="text-4xl mb-3">🦵</div>
+            <h2 className="text-xl font-bold text-text mb-2">
+              キック
+            </h2>
+            <p className="text-sm text-text-muted">
+              <Ruby>4種類のキックテクニックを練習しよう！かっこよく蹴り上げよう！</Ruby>
+            </p>
+            <span className="inline-block mt-3 text-primary font-medium text-sm">
+              <Ruby>練習する</Ruby> →
+            </span>
+          </Link>
+
           {/* Quiz */}
           <Link
             href="/quiz"

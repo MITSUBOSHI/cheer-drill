@@ -24,6 +24,15 @@ export function Header() {
             <Link href="/steps" className="hover:text-accent transition-colors">
               ステップ
             </Link>
+            <Link href="/jumps" className="hover:text-accent transition-colors">
+              ジャンプ
+            </Link>
+            <Link href="/turns" className="hover:text-accent transition-colors">
+              ターン
+            </Link>
+            <Link href="/kicks" className="hover:text-accent transition-colors">
+              キック
+            </Link>
             <Link href="/quiz" className="hover:text-accent transition-colors">
               クイズ
             </Link>
@@ -79,6 +88,15 @@ export function Header() {
           </Link>
           <Link href="/steps" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
             ステップ
+          </Link>
+          <Link href="/jumps" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
+            ジャンプ
+          </Link>
+          <Link href="/turns" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
+            ターン
+          </Link>
+          <Link href="/kicks" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
+            キック
           </Link>
           <Link href="/quiz" onClick={() => setMenuOpen(false)} className="hover:text-accent transition-colors">
             クイズ

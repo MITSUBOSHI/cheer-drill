@@ -1,4 +1,4 @@
-export type Category = "arm-motion" | "step";
+export type Category = "arm-motion" | "step" | "jump" | "turn" | "kick";
 
 export type Difficulty = "easy" | "medium" | "hard";
 
