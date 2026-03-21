@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { armMotions } from "@/data/arm-motions";
 import { MotionDetail } from "@/components/MotionDetail";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return armMotions.map((m) => ({ slug: m.slug }));
 }

@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { jumps } from "@/data/jumps";
 import { MotionDetail } from "@/components/MotionDetail";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return jumps.map((m) => ({ slug: m.slug }));
 }
