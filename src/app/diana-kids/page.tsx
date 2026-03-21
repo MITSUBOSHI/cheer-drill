@@ -119,6 +119,13 @@ export default function DianaKidsPage() {
         <h3 className="font-bold text-text mb-4">
           【Wing　歌詞】
         </h3>
+        <audio
+          controls
+          className="w-full mb-4"
+          src={`${process.env.NODE_ENV === "production" ? "/cheer-drill" : ""}/2026-wing.mp3`}
+        >
+          お使いのブラウザは音声再生に対応していません。
+        </audio>
         <div className="text-text leading-loose whitespace-pre-line">
           <Ruby>{LYRICS}</Ruby>
         </div>
