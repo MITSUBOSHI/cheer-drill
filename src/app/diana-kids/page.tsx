@@ -130,6 +130,20 @@ export default function DianaKidsPage() {
           <Ruby>{LYRICS}</Ruby>
         </div>
       </section>
+
+      {/* ポンダンス */}
+      <section className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 mt-8">
+        <h2 className="font-bold text-lg text-text mb-4">
+          ポンダンス
+        </h2>
+        <audio
+          controls
+          className="w-full"
+          src={`${process.env.NODE_ENV === "production" ? "/cheer-drill" : ""}/pom-dance.mp3`}
+        >
+          お使いのブラウザは音声再生に対応していません。
+        </audio>
+      </section>
     </div>
   );
 }
