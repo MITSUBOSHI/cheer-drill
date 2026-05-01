@@ -10,6 +10,21 @@ const PROMISES = [
   { letter: "ナ", text: "仲間を思いやる" },
 ];
 
+const WING_VIDEOS = [
+  { label: "ファースト振り", src: "wing-first.mp4" },
+  { label: "セカンド振り", src: "wing-second.mp4" },
+  { label: "ショート振り", src: "wing-short.mp4" },
+  { label: "サード・ユース・スター振り", src: "wing-third-youth-star.mp4" },
+];
+
+const ATSUKI_HOSHI_VIDEOS = [
+  { label: "ファースト・セカンド振り", src: "atsuki-hoshi-first-second.mp4" },
+  {
+    label: "ショート・サード・ユース・スター振り",
+    src: "atsuki-hoshi-short-third-youth-star.mp4",
+  },
+];
+
 const LYRICS = `走り出せ　心のままに
 迷いを越えて　光を探せ
 昨日の涙は　未来の地図になる
@@ -54,6 +69,9 @@ export default function DianaKidsPage() {
       setError(true);
     }
   };
+
+  const assetPrefix =
+    process.env.NODE_ENV === "production" ? "/cheer-drill" : "";
 
   if (!authenticated) {
     return (
@@ -122,7 +140,7 @@ export default function DianaKidsPage() {
         <audio
           controls
           className="w-full mb-4"
-          src={`${process.env.NODE_ENV === "production" ? "/cheer-drill" : ""}/2026-wing.mp3`}
+          src={`${assetPrefix}/2026-wing.mp3`}
         >
           お使いのブラウザは音声再生に対応していません。
         </audio>
@@ -139,10 +157,66 @@ export default function DianaKidsPage() {
         <audio
           controls
           className="w-full"
-          src={`${process.env.NODE_ENV === "production" ? "/cheer-drill" : ""}/pom-dance.mp3`}
+          src={`${assetPrefix}/pom-dance.mp3`}
         >
           お使いのブラウザは音声再生に対応していません。
         </audio>
+      </section>
+
+      {/* テーマソング「Wing」振付けお手本動画 */}
+      <section className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 mt-8">
+        <h2 className="font-bold text-lg text-text mb-1">
+          <Ruby>テーマソング「Wing」振付けお手本動画</Ruby>
+        </h2>
+        <p className="text-text-muted text-sm mb-4">
+          <Ruby>クラスごとの振付けを確認できます</Ruby>
+        </p>
+        <div className="space-y-5">
+          {WING_VIDEOS.map((v) => (
+            <div key={v.src}>
+              <h3 className="font-bold text-text mb-2 text-sm">
+                <Ruby>{v.label}</Ruby>
+              </h3>
+              <video
+                controls
+                preload="none"
+                playsInline
+                className="w-full rounded-lg bg-black"
+                src={`${assetPrefix}/videos/${v.src}`}
+              >
+                お使いのブラウザは動画再生に対応していません。
+              </video>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 球団歌「熱き星たちよ」振付けお手本動画 */}
+      <section className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 mt-8">
+        <h2 className="font-bold text-lg text-text mb-1">
+          <Ruby>球団歌「熱き星たちよ」振付けお手本動画</Ruby>
+        </h2>
+        <p className="text-text-muted text-sm mb-4">
+          <Ruby>クラスごとの振付けを確認できます</Ruby>
+        </p>
+        <div className="space-y-5">
+          {ATSUKI_HOSHI_VIDEOS.map((v) => (
+            <div key={v.src}>
+              <h3 className="font-bold text-text mb-2 text-sm">
+                <Ruby>{v.label}</Ruby>
+              </h3>
+              <video
+                controls
+                preload="none"
+                playsInline
+                className="w-full rounded-lg bg-black"
+                src={`${assetPrefix}/videos/${v.src}`}
+              >
+                お使いのブラウザは動画再生に対応していません。
+              </video>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
