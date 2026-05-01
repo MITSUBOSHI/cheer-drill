@@ -22,7 +22,7 @@ test.describe("diana-kids page", () => {
     await page.getByRole("button", { name: /入る/ }).click();
     await expect(page.getByText("4つのお約束")).toBeVisible();
     await expect(
-      page.getByRole("heading", { name: /Wing/ })
+      page.getByRole("heading", { level: 3, name: /Wing.*歌詞/ })
     ).toBeVisible();
   });
 
