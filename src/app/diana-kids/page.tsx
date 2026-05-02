@@ -11,17 +11,26 @@ const PROMISES = [
 ];
 
 const WING_VIDEOS = [
-  { label: "ファースト振り", src: "wing-first.mp4" },
-  { label: "セカンド振り", src: "wing-second.mp4" },
-  { label: "ショート振り", src: "wing-short.mp4" },
-  { label: "サード・ユース・スター振り", src: "wing-third-youth-star.mp4" },
+  { label: "ファースト振り", src: "wing-first.mp4", isFirstClass: true },
+  { label: "セカンド振り", src: "wing-second.mp4", isFirstClass: false },
+  { label: "ショート振り", src: "wing-short.mp4", isFirstClass: false },
+  {
+    label: "サード・ユース・スター振り",
+    src: "wing-third-youth-star.mp4",
+    isFirstClass: false,
+  },
 ];
 
 const ATSUKI_HOSHI_VIDEOS = [
-  { label: "ファースト・セカンド振り", src: "atsuki-hoshi-first-second.mp4" },
+  {
+    label: "ファースト・セカンド振り",
+    src: "atsuki-hoshi-first-second.mp4",
+    isFirstClass: true,
+  },
   {
     label: "ショート・サード・ユース・スター振り",
     src: "atsuki-hoshi-short-third-youth-star.mp4",
+    isFirstClass: false,
   },
 ];
 
@@ -58,6 +67,7 @@ export default function DianaKidsPage() {
   const [authenticated, setAuthenticated] = useState(false);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
+  const [showAllClasses, setShowAllClasses] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -163,8 +173,21 @@ export default function DianaKidsPage() {
         </audio>
       </section>
 
+      {/* クラス表示切替 */}
+      <div className="mt-8 flex justify-end">
+        <label className="flex items-center gap-2 cursor-pointer text-sm text-text-muted select-none">
+          <input
+            type="checkbox"
+            checked={showAllClasses}
+            onChange={(e) => setShowAllClasses(e.target.checked)}
+            className="w-4 h-4 accent-primary"
+          />
+          <Ruby>他のクラスの動画も表示する</Ruby>
+        </label>
+      </div>
+
       {/* テーマソング「Wing」振付けお手本動画 */}
-      <section className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 mt-8">
+      <section className="bg-surface rounded-2xl shadow-sm border border-primary-light/30 p-6 mt-3">
         <h2 className="font-bold text-lg text-text mb-1">
           <Ruby>テーマソング「Wing」振付けお手本動画</Ruby>
         </h2>
@@ -172,7 +195,7 @@ export default function DianaKidsPage() {
           <Ruby>クラスごとの振付けを確認できます</Ruby>
         </p>
         <div className="space-y-5">
-          {WING_VIDEOS.map((v) => (
+          {WING_VIDEOS.filter((v) => showAllClasses || v.isFirstClass).map((v) => (
             <div key={v.src}>
               <h3 className="font-bold text-text mb-2 text-sm">
                 <Ruby>{v.label}</Ruby>
@@ -200,7 +223,9 @@ export default function DianaKidsPage() {
           <Ruby>クラスごとの振付けを確認できます</Ruby>
         </p>
         <div className="space-y-5">
-          {ATSUKI_HOSHI_VIDEOS.map((v) => (
+          {ATSUKI_HOSHI_VIDEOS.filter(
+            (v) => showAllClasses || v.isFirstClass,
+          ).map((v) => (
             <div key={v.src}>
               <h3 className="font-bold text-text mb-2 text-sm">
                 <Ruby>{v.label}</Ruby>
